@@ -7,9 +7,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className='divflex'>
-          <Counter />
-          <Counter />
-          <Counter />
+          <Counter increment ={1}/>
+          <Counter increment={2} />
+          <Counter increment={5} />
         </div>
       </div>
     );

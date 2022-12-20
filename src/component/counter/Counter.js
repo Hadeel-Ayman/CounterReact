@@ -5,12 +5,12 @@ export default class Counter extends Component {
         counter: 0
     }
 
-    onIncrement = (num) => {
-        this.setState(prevState => ({ counter: prevState.counter + 1 }))
+    onIncrement = () => {
+        this.setState((prevState, props) => ({ counter: prevState.counter + props.increment }))
     }
-    onDecrement = (num) => {
-        if(this.state.counter > 0){
-            this.setState(prevState => ({ counter: prevState.counter - 1 }))
+    onDecrement = () => {
+        if (this.state.counter > 0) {
+            this.setState((prevState, props) => ({ counter: prevState.counter - props.increment }))
         }
     }
 
