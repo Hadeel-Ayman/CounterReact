@@ -1,0 +1,28 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.count {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.count1 {
+    background-color: #49c78e;
+    border: 1px solid #49c78e;
+}
+
+.count2 {
+    background-color: #f24667;
+    border: 1px solid #f24667;
+}
+.pCounter{
+    font-size: 40px;
+}
