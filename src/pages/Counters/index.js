@@ -16,8 +16,7 @@ export default class Counters extends Component {
       return {
         data: prevState.data.map((item) => {
           if (item.id === id) {
-            console.log(id)
-              return { ...item, count: +item.count + steps };
+            return { ...item, count: +item.count + steps };
           }
           return item;
         }),
