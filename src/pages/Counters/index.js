@@ -16,7 +16,7 @@ export default class Counters extends Component {
       return {
         data: prevState.data.map((item) => {
           if (item.id === id) {
-              return { ...item, count: item.count + item.steps };
+            return { ...item, count: item.count + item.steps };
           }
           return item;
         }),
@@ -29,7 +29,9 @@ export default class Counters extends Component {
       return {
         data: prevState.data.map((item) => {
           if (item.id === id) {
-              return { ...item, count: (item.count > 0 ? item.count: '') - item.steps };
+            if (item.count > 0) {
+              return { ...item, count: item.count - item.steps };
+            }
           }
           return item;
         }),
