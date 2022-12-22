@@ -11,13 +11,12 @@ export default class Counters extends Component {
     data,
   };
 
-  
-  onIncrement = (id, steps) => {
+  onIncrement = (id) => {
     this.setState((prevState) => {
       return {
         data: prevState.data.map((item) => {
           if (item.id === id) {
-            return { ...item, count: +item.count + steps };
+              return { ...item, count: item.count + item.steps };
           }
           return item;
         }),
@@ -25,13 +24,12 @@ export default class Counters extends Component {
     });
   };
 
-
-  onDecrement = (id, steps) => {
+  onDecrement = (id) => {
     this.setState((prevState) => {
       return {
         data: prevState.data.map((item) => {
           if (item.id === id) {
-            return { ...item, count: item.count - steps };
+              return { ...item, count: (item.count > 0 ? item.count: '') - item.steps };
           }
           return item;
         }),
