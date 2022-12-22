@@ -11,6 +11,7 @@ export default class Counters extends Component {
     data,
   };
 
+  
   onIncrement = (id, steps) => {
     this.setState((prevState) => {
       return {
@@ -23,6 +24,8 @@ export default class Counters extends Component {
       };
     });
   };
+
+
   onDecrement = (id, steps) => {
     this.setState((prevState) => {
       return {
